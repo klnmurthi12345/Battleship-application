@@ -1,0 +1,23 @@
+{
+  "name": "battleship-application",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "webpack --config webpack.config.js",
+    "start": "webpack-dev-server --config webpack.config.js --open"
+  },
+  "repository": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "css-loader": "^7.1.4",
+    "html-webpack-plugin": "^5.6.7",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.107.2",
+    "webpack-cli": "^7.0.3",
+    "webpack-dev-server": "^5.2.5"
+  }
+}

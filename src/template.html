@@ -1,0 +1,946 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Battle Ship Application</title>
+    </head>
+    <body>
+        <header>Battle Ship Game</header>
+        <div class="start-screen" id="start-screen">
+            <button id="btn" type="button">START</button>
+        </div>
+        <div class="set-board-screen hidden" id="set-board-screen">
+            <div class="ship-container">
+                <div class="ship carrier" id="carrier"></div>
+                <div class="ship battleship" id="battleship"></div>
+                <div class="ship cruiser" id="cruiser"></div>
+                <div class="ship submarine" id="submarine"></div>
+                <div class="ship destroyer" id="destroyer"></div>
+            </div>
+            <div class="board-container" id="board-container">
+                <div class="board" id="board">
+                    <div class="cell" id="board-containercell0"></div>
+                    <div class="cell" id="board-containercell1"></div>
+                    <div class="cell" id="board-containercell2"></div>
+                    <div class="cell" id="board-containercell3"></div>
+                    <div class="cell" id="board-containercell4"></div>
+                    <div class="cell" id="board-containercell5"></div>
+                    <div class="cell" id="board-containercell6"></div>
+                    <div class="cell" id="board-containercell7"></div>
+                    <div class="cell" id="board-containercell8"></div>
+                    <div class="cell" id="board-containercell9"></div>
+                    <div class="cell" id="board-containercell10"></div>
+                    <div class="cell" id="board-containercell11"></div>
+                    <div class="cell" id="board-containercell12"></div>
+                    <div class="cell" id="board-containercell13"></div>
+                    <div class="cell" id="board-containercell14"></div>
+                    <div class="cell" id="board-containercell15"></div>
+                    <div class="cell" id="board-containercell16"></div>
+                    <div class="cell" id="board-containercell17"></div>
+                    <div class="cell" id="board-containercell18"></div>
+                    <div class="cell" id="board-containercell19"></div>
+                    <div class="cell" id="board-containercell20"></div>
+                    <div class="cell" id="board-containercell21"></div>
+                    <div class="cell" id="board-containercell22"></div>
+                    <div class="cell" id="board-containercell23"></div>
+                    <div class="cell" id="board-containercell24"></div>
+                    <div class="cell" id="board-containercell25"></div>
+                    <div class="cell" id="board-containercell26"></div>
+                    <div class="cell" id="board-containercell27"></div>
+                    <div class="cell" id="board-containercell28"></div>
+                    <div class="cell" id="board-containercell29"></div>
+                    <div class="cell" id="board-containercell30"></div>
+                    <div class="cell" id="board-containercell31"></div>
+                    <div class="cell" id="board-containercell32"></div>
+                    <div class="cell" id="board-containercell33"></div>
+                    <div class="cell" id="board-containercell34"></div>
+                    <div class="cell" id="board-containercell35"></div>
+                    <div class="cell" id="board-containercell36"></div>
+                    <div class="cell" id="board-containercell37"></div>
+                    <div class="cell" id="board-containercell38"></div>
+                    <div class="cell" id="board-containercell39"></div>
+                    <div class="cell" id="board-containercell40"></div>
+                    <div class="cell" id="board-containercell41"></div>
+                    <div class="cell" id="board-containercell42"></div>
+                    <div class="cell" id="board-containercell43"></div>
+                    <div class="cell" id="board-containercell44"></div>
+                    <div class="cell" id="board-containercell45"></div>
+                    <div class="cell" id="board-containercell46"></div>
+                    <div class="cell" id="board-containercell47"></div>
+                    <div class="cell" id="board-containercell48"></div>
+                    <div class="cell" id="board-containercell49"></div>
+                    <div class="cell" id="board-containercell50"></div>
+                    <div class="cell" id="board-containercell51"></div>
+                    <div class="cell" id="board-containercell52"></div>
+                    <div class="cell" id="board-containercell53"></div>
+                    <div class="cell" id="board-containercell54"></div>
+                    <div class="cell" id="board-containercell55"></div>
+                    <div class="cell" id="board-containercell56"></div>
+                    <div class="cell" id="board-containercell57"></div>
+                    <div class="cell" id="board-containercell58"></div>
+                    <div class="cell" id="board-containercell59"></div>
+                    <div class="cell" id="board-containercell60"></div>
+                    <div class="cell" id="board-containercell61"></div>
+                    <div class="cell" id="board-containercell62"></div>
+                    <div class="cell" id="board-containercell63"></div>
+                    <div class="cell" id="board-containercell64"></div>
+                    <div class="cell" id="board-containercell65"></div>
+                    <div class="cell" id="board-containercell66"></div>
+                    <div class="cell" id="board-containercell67"></div>
+                    <div class="cell" id="board-containercell68"></div>
+                    <div class="cell" id="board-containercell69"></div>
+                    <div class="cell" id="board-containercell70"></div>
+                    <div class="cell" id="board-containercell71"></div>
+                    <div class="cell" id="board-containercell72"></div>
+                    <div class="cell" id="board-containercell73"></div>
+                    <div class="cell" id="board-containercell74"></div>
+                    <div class="cell" id="board-containercell75"></div>
+                    <div class="cell" id="board-containercell76"></div>
+                    <div class="cell" id="board-containercell77"></div>
+                    <div class="cell" id="board-containercell78"></div>
+                    <div class="cell" id="board-containercell79"></div>
+                    <div class="cell" id="board-containercell80"></div>
+                    <div class="cell" id="board-containercell81"></div>
+                    <div class="cell" id="board-containercell82"></div>
+                    <div class="cell" id="board-containercell83"></div>
+                    <div class="cell" id="board-containercell84"></div>
+                    <div class="cell" id="board-containercell85"></div>
+                    <div class="cell" id="board-containercell86"></div>
+                    <div class="cell" id="board-containercell87"></div>
+                    <div class="cell" id="board-containercell88"></div>
+                    <div class="cell" id="board-containercell89"></div>
+                    <div class="cell" id="board-containercell90"></div>
+                    <div class="cell" id="board-containercell91"></div>
+                    <div class="cell" id="board-containercell92"></div>
+                    <div class="cell" id="board-containercell93"></div>
+                    <div class="cell" id="board-containercell94"></div>
+                    <div class="cell" id="board-containercell95"></div>
+                    <div class="cell" id="board-containercell96"></div>
+                    <div class="cell" id="board-containercell97"></div>
+                    <div class="cell" id="board-containercell98"></div>
+                    <div class="cell" id="board-containercell99"></div>
+                </div>
+                <button id="btn">Continue</button>
+            </div>
+        </div>
+        <div class="play-screen hidden" id="play-screen">
+            <div class="game-container" id="game-container">
+                <div class="player-board-container" id="player-board-container">
+                    <div class="board">
+                        <div
+                            class="cell"
+                            id="player-board-containercell0"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell1"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell2"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell3"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell4"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell5"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell6"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell7"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell8"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell9"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell10"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell11"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell12"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell13"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell14"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell15"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell16"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell17"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell18"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell19"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell20"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell21"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell22"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell23"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell24"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell25"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell26"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell27"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell28"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell29"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell30"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell31"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell32"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell33"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell34"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell35"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell36"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell37"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell38"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell39"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell40"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell41"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell42"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell43"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell44"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell45"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell46"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell47"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell48"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell49"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell50"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell51"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell52"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell53"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell54"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell55"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell56"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell57"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell58"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell59"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell60"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell61"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell62"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell63"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell64"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell65"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell66"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell67"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell68"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell69"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell70"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell71"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell72"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell73"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell74"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell75"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell76"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell77"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell78"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell79"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell80"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell81"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell82"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell83"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell84"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell85"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell86"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell87"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell88"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell89"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell90"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell91"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell92"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell93"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell94"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell95"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell96"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell97"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell98"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="player-board-containercell99"
+                        ></div>
+                    </div>
+                </div>
+                <div
+                    class="computer-board-container"
+                    id="computer-board-container"
+                >
+                    <div class="board">
+                        <div
+                            class="cell"
+                            id="computer-board-containercell0"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell1"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell2"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell3"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell4"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell5"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell6"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell7"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell8"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell9"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell10"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell11"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell12"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell13"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell14"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell15"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell16"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell17"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell18"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell19"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell20"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell21"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell22"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell23"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell24"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell25"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell26"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell27"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell28"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell29"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell30"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell31"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell32"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell33"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell34"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell35"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell36"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell37"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell38"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell39"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell40"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell41"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell42"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell43"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell44"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell45"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell46"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell47"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell48"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell49"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell50"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell51"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell52"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell53"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell54"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell55"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell56"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell57"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell58"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell59"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell60"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell61"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell62"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell63"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell64"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell65"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell66"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell67"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell68"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell69"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell70"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell71"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell72"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell73"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell74"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell75"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell76"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell77"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell78"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell79"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell80"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell81"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell82"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell83"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell84"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell85"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell86"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell87"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell88"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell89"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell90"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell91"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell92"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell93"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell94"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell95"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell96"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell97"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell98"
+                        ></div>
+                        <div
+                            class="cell"
+                            id="computer-board-containercell99"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-container" id="btn-container">
+                <button class="new-game">New Game</button>
+                <button class="reset-current-game">Restart Game</button>
+            </div>
+        </div>
+        <footer>battle ship game</footer>
+    </body>
+</html>
